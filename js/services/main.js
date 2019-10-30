@@ -1,1 +1,1 @@
-angular.module('AluraPic', []);
+angular.module('AluraPic', ['minhasDiretivas','ngAnimate']);

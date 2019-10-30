@@ -11,7 +11,8 @@ angular.module('AluraPic', ['minhasDiretivas','ngAnimate','ngRoute'])
     $routeProvider.otherwise({ redirectTo: '/fotos'}); // Responsável por redirecionar para '/fotos' caso não exista a rota digitada.
 
     $routeProvider.when('/fotos/new', {
-        templateUrl: 'partials/foto.html'
+        templateUrl: 'partials/foto.html',
+        controller: 'FotoController'
     });
 
 });

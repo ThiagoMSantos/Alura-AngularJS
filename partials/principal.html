@@ -5,13 +5,19 @@
 <div class="row">
     <div class="col-md-12">
         <form>
-            <input ng-model="filtro" ng-model-options="{ debounce:300 }" class="form-control" placeholder="Filtrar">
-        </form>
+            <div class="input-group">
+                <span class="input-group-btn">
+                        <a href="fotos/new" class="btn btn-primary">Nova Foto</a>
+                </span>     
+                <input ng-model="filtro" ng-model-options="{ debounce:300 }" class="form-control" placeholder="Filtrar">
+            </div><!--Fim do Input Group-->
+        </form><!--Fim do Form-->
     </div><!--Fim da Coluna-->
 </div><!-- Fim da Row-->
 
 <div class="row">
     <meu-painel class="col-md-2 painel-animado" ng-repeat="foto in fotos | filter: filtro" titulo="{{foto.titulo}}"> <!-- ng-repeat(Angular) serve para repetir um escopo -->
-        <img class="img-responsive center-block" src="{{foto.url}}" alt="{{foto.titulo}}">
+        <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
     </meu-painel>
 </div>
+ 

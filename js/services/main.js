@@ -15,4 +15,9 @@ angular.module('AluraPic', ['minhasDiretivas','ngAnimate','ngRoute'])
         controller: 'FotoController'
     });
 
+    $routeProvider.when('/fotos/edit/:fotoId', {
+        templateUrl: 'partials/foto.html',
+        controller: 'FotoController'
+    });
+
 });
